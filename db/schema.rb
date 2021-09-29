@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_09_28_220816) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "type"
+    t.string "listing_type"
     t.integer "price"
     t.integer "total_available"
     t.string "image"
