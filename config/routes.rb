@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :carts
       resources :products
       resources :users
+      post 'auth/request', to: 'authorization#get_authorization'
     end
   end
 end

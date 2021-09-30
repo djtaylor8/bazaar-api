@@ -44,3 +44,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Rest Client for seed data
 gem 'rest-client'
+
+#OAuth 
+gem 'omniauth-google-oauth2'
+gem 'devise_token_auth'
+
+gem 'figaro'
