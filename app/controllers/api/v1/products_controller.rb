@@ -1,4 +1,5 @@
 class Api::V1::ProductsController < ApplicationController
+    skip_before_action :authenticate
     before_action :set_product, only: [:update, :destroy]
 
     def index
