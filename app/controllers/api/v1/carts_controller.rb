@@ -9,9 +9,20 @@ class Api::V1::CartsController < ApplicationController
       render json: cart 
     end
 
+    def update 
+      user = User.find(cart_params[:user_id])
+      product = Product.find(cart_params[:product_id])
+      quantity = cart_params[:quantity]
+
+      cart_product = CartProduct.create!(cart_id: user.cart.id, product_id: cart_params[:product_id], quantity: cart_params[:quantity])
+      user.cart.cart_products << cart_product 
+      user.save!
+      render json: user, include: '**'
+    end
+
     private 
 
     def cart_params 
-      params.permit(:user_id)
+      params.permit(:user_id, :cart_id, :product_id, :quantity)
     end
 end
