@@ -17,7 +17,7 @@ class Api::V1::CartsController < ApplicationController
       cart_product = CartProduct.create!(cart_id: user.cart.id, product_id: cart_params[:product_id], quantity: cart_params[:quantity])
       user.cart.cart_products << cart_product 
       user.save!
-      render json: user, include: '**'
+      render json: product
     end
 
     private 
