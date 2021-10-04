@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
       patch '/carts/:id/remove' => 'carts#remove_product'
       post 'auth/request' => 'sessions#create'
+
+      post '/create-payment-intent' => 'payments#create_payment'
     end
   end
 end

@@ -53,3 +53,5 @@ gem 'jwt'
 gem 'faraday'
 
 gem 'httparty'
+
+gem 'stripe'
