@@ -20,6 +20,15 @@ class Api::V1::CartsController < ApplicationController
       render json: product
     end
 
+    def remove_product 
+      user = User.find(cart_params[:user_id])
+      product_to_remove = Product.find(cart_params[:product_id])
+
+      user.cart.cart_products.select {|product| product.id != product_to_remove.id}
+      user.save!
+      render json: product_to_remove
+    end
+
     private 
 
     def cart_params 

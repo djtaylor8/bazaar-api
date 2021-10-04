@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :products
       resources :users
 
+      patch '/carts/:id/remove' => 'carts#remove_product'
       post 'auth/request' => 'sessions#create'
     end
   end
