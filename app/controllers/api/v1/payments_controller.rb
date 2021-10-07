@@ -4,7 +4,6 @@ Stripe.api_key = ENV['stripe_secret']
 class Api::V1::PaymentsController < ApplicationController
 
     def create_payment
-        # byebug
         user = User.find(params[:user][:id])
         total_price = params[:amount].to_i
         currency = params[:currency]
