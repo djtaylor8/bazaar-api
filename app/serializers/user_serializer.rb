@@ -3,4 +3,5 @@ class UserSerializer < ActiveModel::Serializer
     has_one :cart
     has_many :products
     has_many :cart_products, through: :cart
+    has_many :orders 
   end
