@@ -16,7 +16,7 @@ After cloning this frontend repo, cd into it and run ```npm install``` to load n
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/djtaylor8/brewlog-frontend. 
+Bug reports and pull requests are welcome on GitHub at https://github.com/djtaylor8/bazaar-api. 
 
 ## Authors
 
