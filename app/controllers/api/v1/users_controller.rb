@@ -38,7 +38,7 @@ class Api::V1::UsersController < ApplicationController
       private 
   
       def user_params
-          permit(:name, :email, :image, :google_token)
+          permit(:name, :email, :image, :google_token. :product_id, :quantity)
       end
 
 end
