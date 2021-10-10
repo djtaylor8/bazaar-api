@@ -9,6 +9,6 @@ class Api::V1::SessionsController < ApplicationController
       response = HTTParty.get(url)
       @user = User.create_user_for_google(response.parsed_response)
       @user.save 
-      render json: @user              
+      render json: { user: @user, status: 'success' }              
     end
 end

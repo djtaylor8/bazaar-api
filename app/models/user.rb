@@ -4,6 +4,9 @@ class User < ApplicationRecord
     has_many :cart_products, through: :cart, :dependent => :destroy 
     has_many :orders 
 
+    validates :name, :email, presence: true 
+    validates_uniqueness_of :email 
+
     def self.create_user_for_google(data)                  
         where(email: data["email"]).first_or_initialize.tap do |user|
           user.google_token=data["sub"].to_s
