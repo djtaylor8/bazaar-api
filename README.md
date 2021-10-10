@@ -1,24 +1,27 @@
-# README
+# Bazaar - React App with Rails API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Built using React, Bazaar is an e-commerce application that utilizes Redux-Thunk, Material UI, and the Stripe API. This is my final portfolio project as part of the Flatiron School software engineering program.
 
-Things you may want to cover:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-* Ruby version
+## Installing
 
-* System dependencies
+Make sure you have Ruby, Rails, React, and PostgreSQL installed on your device.
 
-* Configuration
+Clone the backend repo [here](https://github.com/djtaylor8/bazaar-api) and run ```bundle install```.
 
-* Database creation
+Create the database and run migrations by running rails db:create and rails db:migrate. Sample products from the FakeStore API will be added to the database after running ```rails db:seed```. Finally, start the server by running rails s.
 
-* Database initialization
+After cloning this frontend repo, cd into it and run ```npm install``` to load necessary dependencies, and ```npm run``` to view in your browser. 
 
-* How to run the test suite
+## Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
+Bug reports and pull requests are welcome on GitHub at https://github.com/djtaylor8/brewlog-frontend. 
 
-* Deployment instructions
+## Authors
 
-* ...
+* **DJ Taylor** (https://github.com/djtaylor8)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
