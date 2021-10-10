@@ -38,16 +38,6 @@ ActiveRecord::Schema.define(version: 2021_10_06_213926) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "product_id", null: false
-    t.string "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["product_id"], name: "index_comments_on_product_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
   create_table "orders", force: :cascade do |t|
     t.string "address"
     t.string "city"
@@ -90,8 +80,6 @@ ActiveRecord::Schema.define(version: 2021_10_06_213926) do
   add_foreign_key "cart_products", "carts"
   add_foreign_key "cart_products", "products"
   add_foreign_key "carts", "users"
-  add_foreign_key "comments", "products"
-  add_foreign_key "comments", "users"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "users"
 end
