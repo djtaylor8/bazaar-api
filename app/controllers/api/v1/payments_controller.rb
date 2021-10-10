@@ -12,13 +12,13 @@ class Api::V1::PaymentsController < ApplicationController
             currency: currency
         )
         
-        order = Order.create!(user: user, address: params[:address], city: params[:city], state: params[:state], total: params[:amount])
+        order = Order.create!(user: user, address: params[:address], city: params[:city], state: params[:state], total: params[:amount], order_number: params[:order_number])
         render json: { clientSecret: payment_intent.client_secret, order: order }
     end
 
     private 
 
     def payment_params
-        params.permit(:amount, :currency, :paymentMethodType, :address, :city, :state, :user)
+        params.permit(:amount, :currency, :paymentMethodType, :address, :city, :state, :user, :order_number)
     end
 end
