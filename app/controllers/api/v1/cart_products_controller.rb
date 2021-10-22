@@ -20,6 +20,7 @@ class Api::V1::CartProductsController < ApplicationController
         render json: @cart_product
       else
         render json: { status: 'error', message: 'Sorry, there was an error!'}
+      end
     end
 
     def destroy 
@@ -28,6 +29,7 @@ class Api::V1::CartProductsController < ApplicationController
         render json: { status: 'success', message: 'Product deleted' }
       else  
         render json: { status: 'error', message: 'Sorry, there was an error!' }
+      end
     end
 
     private
